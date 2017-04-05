@@ -55,7 +55,7 @@ int push(tPilha *pilha, char elem){
         tNo *novoNo;
         novoNo = (tNo*) malloc(sizeof (tNo));
         if(novoNo == NULL){
-            return 0; /* Mem�ria Insuficiente */
+            return 0; /* Memória Insuficiente */
         }
         novoNo->dado = elem;
         novoNo->prox = NULL;
@@ -90,13 +90,13 @@ int pop(tPilha *pilha, char *dado){
 }
 
 int main(void){
-    tPilha conv;
-    cria(&conv);
+    tPilha conv; // Criação da pilha 
+    cria(&conv); // Inicialização da pilha
 
     int numExp = 0;
     scanf("%d", &numExp);
 
-    char exp[numExp][MAX_LENGTH]; /* Array bidimensional para armazenar as express�es infixas */
+    char exp[numExp][MAX_LENGTH]; /* Array bidimensional para armazenar as expressões infixas */
     for(int i = 0; i < numExp; i++){
         scanf("%s", exp[i]);
     }
